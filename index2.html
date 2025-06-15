@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>𝘼𝙪𝙢𝙗𝙞𝙙</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(135deg, #222, #000);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 30px 0;
+      background-color: #ffcc00;
+      color: #000;
+      font-size: 2em;
+      font-weight: bold;
+      box-shadow: 0 0 20px #ffff33;
+      position: relative;
+    }
+
+    .lightning-icon {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 40px;
+      color: #fff700;
+      text-shadow: 0 0 10px yellow;
+    }
+
+    .menu-container, .login-container {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .menu-button, .login-button {
+      background: linear-gradient(145deg, #ffe600, #ffc400);
+      color: #000;
+      border: none;
+      padding: 20px 40px;
+      font-size: 1.5em;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ffff33;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .menu-button:hover, .login-button:hover {
+      background: #fff200;
+      box-shadow: 0 0 25px #fff933, 0 0 50px #fff933;
+      transform: scale(1.05);
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      border: none;
+      width: 300px;
+      text-align: center;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    .info-text {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #ffff66;
+      text-shadow: 0 0 10px #fff200;
+    }
+    /* ...รหัสอื่นๆ คงเดิม... */
+  .info-text {
+    font-size: 2em; /* ขนาดใหญ่ขึ้น */
+    margin-bottom: 10px;
+    color: #ffff66;
+    text-shadow: 0 0 10px #fff200;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="lightning-icon">⚡</span>
+    𝘼𝙪𝙢𝙗𝙞𝙙
+  </header>
+
+  
+  <div class="login-container" id="login-section">
+    <input type="password" id="password-input" placeholder="𝙀𝙣𝙩𝙚𝙧 𝙮𝙤𝙪𝙧 𝙥𝙖𝙨𝙨𝙬𝙤𝙧𝙙 𝙩𝙤 𝙡𝙤𝙜 𝙞𝙣">
+    <button class="login-button" onclick="checkPassword()">𝙇𝙤𝙜𝙞𝙣</button>
+  </div>
+
+ 
+  <div class="menu-container" id="menu-section" style="display: none;">
+    <div class="info-text">👥 10 คนต่อวัน</div>
+    <a href="https://ere12e.github.io/" class="menu-button">⚡ Look at people</a>
+    <a href="file:///D:/%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%9Bvalorant/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%94%E0%B9%89.html" class="menu-button">💰 View income</a>
+  </div>
+
+  <div class="footer">
+   © 𝟮𝟬𝟮𝟱 𝘼𝙪𝙢𝙗𝙞𝙙 | 𝘿𝙚𝙨𝙞𝙜𝙣 𝙗𝙮 𝙣𝙚𝙧𝙙สุดหล่อ
+  </div>
+
+  <script>
+    const correctPassword = "1234";
+
+    function checkPassword() {
+      const input = document.getElementById("password-input").value;
+      if (input === correctPassword) {
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("menu-section").style.display = "flex";
+      } else {
+        alert("รหัสผ่านไม่ถูกต้อง");
+      }
+    }
+  </script>
+
+</body>
+</html>
